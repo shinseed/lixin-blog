@@ -71,7 +71,7 @@
 <link href="/lixin-blog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -87,19 +87,16 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="javascrtip:线程与伪线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://shinseed.github.io/lixin-blog/2017/03/25/hello-world/index.html">
+<meta property="og:title" content="javascript:伪线程与线程">
+<meta property="og:url" content="https://shinseed.github.io/lixin-blog/2017/03/25/javasceipt-thread/index.html">
 <meta property="og:site_name" content="lixin-blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-03-25T14:02:35.000Z">
+<meta property="og:description" content="javascrtip:线程与伪线程">
+<meta property="og:updated_time" content="2017-03-25T15:30:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="javascript:伪线程与线程">
+<meta name="twitter:description" content="javascrtip:线程与伪线程">
 
 
 
@@ -127,14 +124,14 @@ Quick">
 
 
 
-  <link rel="canonical" href="https://shinseed.github.io/lixin-blog/2017/03/25/hello-world/"/>
+  <link rel="canonical" href="https://shinseed.github.io/lixin-blog/2017/03/25/javasceipt-thread/"/>
 
 
 
 
 
 
-  <title> Hello World | lixin-blog </title>
+  <title> javascript:伪线程与线程 | lixin-blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +280,7 @@ Quick">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/lixin-blog/2017/03/25/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/lixin-blog/2017/03/25/javasceipt-thread/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Xin">
@@ -304,7 +301,7 @@ Quick">
             
             
               
-                Hello World
+                javascript:伪线程与线程
               
             
           </h1>
@@ -319,7 +316,7 @@ Quick">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-25T22:02:35+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-25T23:19:35+08:00">
                 2017-03-25
               </time>
             
@@ -330,6 +327,28 @@ Quick">
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/lixin-blog/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -342,6 +361,10 @@ Quick">
 
           
 
+          
+              <div class="post-description">
+                  javascrtip:线程与伪线程
+              </div>
           
 
         </div>
@@ -355,15 +378,12 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="web-worker"><a href="#web-worker" class="headerlink" title="web worker"></a>web worker</h2><p>这里就不多说了，主要说伪线程。因为web worker不能操作dom元素，很多时候用不上。</p>
+<h2 id="伪线程"><a href="#伪线程" class="headerlink" title="伪线程"></a>伪线程</h2><p>重点：<br><strong>浏览器的内核是多线程的，一个浏览器一般至少实现三个常驻线程：javascript引擎线程，GUI渲染线程，浏览器事件触发线程。</strong></p>
+<p>a.javascript引擎是基于事件驱动单线程执行的，JS引擎一直等待着任务队列中任务的到来，然后加以处理，浏览器无论什么时候都只有一个JS线程在运行JS程序。<br>b.GUI渲染线程负责渲染浏览器界面，当界面需要重排、重绘或由于某种操作引发回流时,该线程就会执行。但需要注意 GUI渲染线程与JS引擎是互斥的，当JS引擎执行时GUI线程会被挂起，GUI更新会被保存在一个队列中等到JS引擎空闲时立即被执行。<br>c.事件触发线程，当一个事件被触发时该线程会把事件添加到待处理队列的队尾，等待JS引擎的处理。这些事件可来自JavaScript引擎当前执行的代码块如setTimeOut、也可来自浏览器内核的其他线程如鼠标点击、AJAX异步请求等，但由于JS的单线程关系所有这些事件都得排队等待JS引擎处理。</p>
+<p>当我们要循环过百万级的数据甚至亿的时候怎么办？<br>那就用setTimeout模拟一个多线程。<br><strong>重点：js的工作机制是：当线程中没有执行任何同步代码的前提下才会执行异步代码，setTimeout是异步代码，所以setTimeout只能等js空闲才会执行，但死循环是永远不会空闲的，所以setTimeout也永远不会执行。即使setTimeout为0，他也是等js引擎的代码执行完之后才会插入到js引擎线程的最后执行。</strong><br>上栗子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">var thread = function () &#123;</div><div class="line">    var nowTime = 0, //线程已经执行了多久</div><div class="line">        maxTime = 15;//线程最多执行多久</div><div class="line">    var threadArr = [];//数组模拟线程队列</div><div class="line">    </div><div class="line">    this.addThread = function (fn) &#123;</div><div class="line">        threadArr.push(fn)</div><div class="line">    &#125;</div><div class="line">    this.start=function () &#123;</div><div class="line">        doingThread();</div><div class="line">    &#125;</div><div class="line">    var doingThread = function () &#123;</div><div class="line">        if (threadArr.length &gt; 0) &#123;</div><div class="line">            if (nowTime &lt; maxTime) &#123;</div><div class="line">                let now = new Date().getTime();</div><div class="line">                var method = threadArr[0];</div><div class="line">                method();</div><div class="line">                threadArr.splice(0, 1);</div><div class="line">                let nowNew = (new Date().getTime() - now);</div><div class="line">                nowTime += nowNew;</div><div class="line">                doingThread();</div><div class="line">            &#125; else &#123;//每执行完线程后睡1ms</div><div class="line">                nowTime=0;</div><div class="line">                setTimeout(doingThread, 1);</div><div class="line">            &#125;</div><div class="line">        &#125;else &#123;//先睡着等待线程队列</div><div class="line">            setTimeout(doingThread,100)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var fn = function (num) &#123;</div><div class="line">    console.log(num)</div><div class="line">&#125;</div><div class="line"></div><div class="line">var thread = new thread();</div><div class="line">thread.start()</div><div class="line">for (let i = 0; i &lt; 1000000; i++) &#123;</div><div class="line">    thread.addThread(function () &#123;</div><div class="line">        fn(i)</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>循环百万级的数据量并且不阻塞Ui线程是完全没问题的，但过亿浏览器还是会蹦。（这里只是提供个简单的思路，其实过亿也可以不蹦）</p>
 
       
     </div>
@@ -390,6 +410,12 @@ Quick">
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/lixin-blog/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
       
 
       
@@ -471,7 +497,25 @@ Quick">
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/lixin-blog/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/lixin-blog/tags/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -503,7 +547,7 @@ Quick">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#web-worker"><span class="nav-number">1.</span> <span class="nav-text">web worker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪线程"><span class="nav-number">2.</span> <span class="nav-text">伪线程</span></a></li></ol></div>
             
 
           </div>
@@ -531,18 +575,6 @@ Quick">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Li Xin</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
 </div>
 
 
