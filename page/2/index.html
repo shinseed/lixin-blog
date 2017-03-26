@@ -281,7 +281,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-scope/">
+    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-xj/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Xin">
@@ -303,8 +303,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/26/javascript-scope/" itemprop="url">
-                  javascript 声明前置与作用域 （hoisting& Scoping）
+                <a class="post-title-link" href="/2017/03/26/javascript-xj/" itemprop="url">
+                  在编写javascript时要注意的一些细节
                 </a>
               
             
@@ -320,7 +320,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:57:25+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:52:50+08:00">
                 2017-03-26
               </time>
             
@@ -360,7 +360,7 @@
 
           
           
-             <span id="/2017/03/26/javascript-scope/" class="leancloud_visitors" data-flag-title="javascript 声明前置与作用域 （hoisting& Scoping）">
+             <span id="/2017/03/26/javascript-xj/" class="leancloud_visitors" data-flag-title="在编写javascript时要注意的一些细节">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -391,11 +391,14 @@
       
         
           
-          1.javascript不管是变量（or 叫变量表达式？或者变量的声明与赋值吧 var scope=”loacal”）的声明还是函数（or 函数表达式）的声明,都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。1234567var scope=&apos;global&apos;
+          自动分号插入Js不像其他语言强制要求;号结尾不然编译不过，原因是JS有自动；号的插入。
+12var text=function()&#123;&#125;text()
+这样你不加;号也能运行其实在内部js是需要;号去帮助解析的
+1var text=function()&#123;&#125;;  /
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/26/javascript-scope/#more" rel="contents">
+            <a class="btn" href="/2017/03/26/javascript-xj/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -441,7 +444,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-this/">
+    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-bb/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Xin">
@@ -463,8 +466,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/26/javascript-this/" itemprop="url">
-                  javascript关于this 以及this的显示设置(apply、call、bind)
+                <a class="post-title-link" href="/2017/03/26/javascript-bb/" itemprop="url">
+                  javascript 闭包、内存泄漏与溢出
                 </a>
               
             
@@ -480,7 +483,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:55:38+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:50:42+08:00">
                 2017-03-26
               </time>
             
@@ -520,7 +523,7 @@
 
           
           
-             <span id="/2017/03/26/javascript-this/" class="leancloud_visitors" data-flag-title="javascript关于this 以及this的显示设置(apply、call、bind)">
+             <span id="/2017/03/26/javascript-bb/" class="leancloud_visitors" data-flag-title="javascript 闭包、内存泄漏与溢出">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -551,12 +554,492 @@
       
         
           
-          this1.其实js中的this没那么难理解，当找不到this时记住一句话：谁调我，我就指谁！new 谁指谁
-1234567891011121314function text1()&#123;    console.log(this);     //指window因为是window调我了&#125;
+          内存泄漏与内存溢出1.内存溢出：指的是程序向系统申请一定大小内存，而系统不能满足程序的要求就是内存的溢出。2.内存泄漏：指申请的内存一直得不到释放，GC回收不了。一般在项目中就是，你声明的变量一直保存在内存中，它有值但你把它的引用地址搞丢了一直没法用它，而GC又没法回收这块内存给别的程序使用就叫内存
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/26/javascript-this/#more" rel="contents">
+            <a class="btn" href="/2017/03/26/javascript-bb/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/design-observer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Xin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blog.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lixin-blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/26/design-observer/" itemprop="url">
+                  观察者模式
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:46:56+08:00">
+                2017-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/26/design-observer/" class="leancloud_visitors" data-flag-title="观察者模式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          概念观察者模式是一个一对多的关系，让多个观察者同时监听一个对象，当这个对象发生了变化时，它会广播给监听它的观察者。使他们自动更新。
+作用1.支持简单的广播通信，自动通知所有的监听者。2.当页面载入后，被观察对象很容易与观察者有一种动态关联的关系，来增加灵活性。3.被观察对象，与观察者之间的抽象耦合关
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/26/design-observer/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/design-yz/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Xin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blog.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lixin-blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/26/design-yz/" itemprop="url">
+                  设计模式原则
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:39:03+08:00">
+                2017-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/26/design-yz/" class="leancloud_visitors" data-flag-title="设计模式原则">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          什么是设计模式设计模式（design pattern）概念：是一套反复使用、思想成熟、经过分类和无数实战设计经验的总结。
+设计模式作用是为了代码可重用、可扩展、可解耦、更容易被人理解与保证代码可靠性。
+设计原则1.开闭原则—对扩展开发、对修改关闭。就是如果有新功能的加入，不能修改与破坏原有的func
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/26/design-yz/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/25/javasceipt-thread/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Xin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blog.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lixin-blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/25/javasceipt-thread/" itemprop="url">
+                  javascript:伪线程与线程
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-25T23:19:35+08:00">
+                2017-03-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript基础/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/25/javasceipt-thread/" class="leancloud_visitors" data-flag-title="javascript:伪线程与线程">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          javascrtip:线程与伪线程
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/25/javasceipt-thread/">
               阅读全文 &raquo;
             </a>
           </div>
@@ -597,7 +1080,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
 
 
