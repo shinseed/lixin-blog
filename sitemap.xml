@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://shinseed.github.io/lixin-blog/about/index.html</loc>
+    
+    <lastmod>2017-03-26T08:49:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://shinseed.github.io/lixin-blog/2017/03/26/javascript-obj/</loc>
     
     <lastmod>2017-03-26T08:04:44.000Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://shinseed.github.io/lixin-blog/404.html</loc>
     
     <lastmod>2017-03-25T15:54:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shinseed.github.io/lixin-blog/about/index.html</loc>
-    
-    <lastmod>2017-03-25T15:40:11.000Z</lastmod>
     
   </url>
   
