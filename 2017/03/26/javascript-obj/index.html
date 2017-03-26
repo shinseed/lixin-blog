@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -87,15 +87,19 @@
 
 
 
-<meta name="description" content="工作中...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lixin-blog">
-<meta property="og:url" content="https://shinseed.github.io/lixin-blog/index.html">
+<meta name="description" content="对象在javascript中经常听到一句话叫做一切事物皆对象。其实得除null和undefined除外 数字也有点特殊看栗子
+1234567891011false.toString();//&amp;apos;false&amp;apos;[1,2,3].toString();//&amp;apos;1,2,3&amp;apos;//数字(1).toString();//&amp;apos;1&amp;apos;1 .toString();//">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript 对象、属性、原型、原型链、new、constructor">
+<meta property="og:url" content="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-obj/index.html">
 <meta property="og:site_name" content="lixin-blog">
-<meta property="og:description" content="工作中...">
+<meta property="og:description" content="对象在javascript中经常听到一句话叫做一切事物皆对象。其实得除null和undefined除外 数字也有点特殊看栗子
+1234567891011false.toString();//&amp;apos;false&amp;apos;[1,2,3].toString();//&amp;apos;1,2,3&amp;apos;//数字(1).toString();//&amp;apos;1&amp;apos;1 .toString();//">
+<meta property="og:updated_time" content="2017-03-26T08:04:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lixin-blog">
-<meta name="twitter:description" content="工作中...">
+<meta name="twitter:title" content="javascript 对象、属性、原型、原型链、new、constructor">
+<meta name="twitter:description" content="对象在javascript中经常听到一句话叫做一切事物皆对象。其实得除null和undefined除外 数字也有点特殊看栗子
+1234567891011false.toString();//&amp;apos;false&amp;apos;[1,2,3].toString();//&amp;apos;1,2,3&amp;apos;//数字(1).toString();//&amp;apos;1&amp;apos;1 .toString();//">
 
 
 
@@ -123,14 +127,14 @@
 
 
 
-  <link rel="canonical" href="https://shinseed.github.io/lixin-blog/"/>
+  <link rel="canonical" href="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-obj/"/>
 
 
 
 
 
 
-  <title> lixin-blog </title>
+  <title> javascript 对象、属性、原型、原型链、new、constructor | lixin-blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -165,9 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,9 +272,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -281,7 +283,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/css-oocss/">
+    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-obj/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Xin">
@@ -302,10 +304,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/26/css-oocss/" itemprop="url">
-                  面向对象css
-                </a>
+                javascript 对象、属性、原型、原型链、new、constructor
               
             
           </h2>
@@ -320,7 +319,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T16:01:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:54:09+08:00">
                 2017-03-26
               </time>
             
@@ -343,8 +342,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css/" itemprop="url" rel="index">
-                    <span itemprop="name">css</span>
+                  <a href="/categories/JavaScript基础/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript基础</span>
                   </a>
                 </span>
 
@@ -356,173 +355,21 @@
 
           
             
-          
-
-          
-          
-             <span id="/2017/03/26/css-oocss/" class="leancloud_visitors" data-flag-title="面向对象css">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          oo css既面向对象的css
-作用1.加强代码的复用方便维护。2.减小css体积。3.提升渲染效率。4.组件库思想、栅格布局可共用、减少选择器、方便扩展。
-注意事项1.不要直接定义子节点，应把共性声明放到父类。2.结构和皮肤相分离。3.容器和内容想相分离。4.抽象出可重用的元素，建好组件库，在组件
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/26/css-oocss/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/framework-xu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Xin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/blog.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lixin-blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/26/framework-xu/" itemprop="url">
-                  前端架构
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/03/26/javascript-obj/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:59:13+08:00">
-                2017-03-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/FrameWork/" itemprop="url" rel="index">
-                    <span itemprop="name">FrameWork</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
             
           
 
           
           
-             <span id="/2017/03/26/framework-xu/" class="leancloud_visitors" data-flag-title="前端架构">
+             <span id="/2017/03/26/javascript-obj/" class="leancloud_visitors" data-flag-title="javascript 对象、属性、原型、原型链、new、constructor">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -534,6 +381,11 @@
              </span>
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>点击量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
           
 
           
@@ -551,56 +403,123 @@
       
 
       
+        <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>在javascript中经常听到一句话叫做一切事物皆对象。<br>其实得除null和undefined除外 数字也有点特殊看栗子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">false.toString();//&apos;false&apos;</div><div class="line">[1,2,3].toString();//&apos;1,2,3&apos;</div><div class="line"></div><div class="line">//数字</div><div class="line">(1).toString();//&apos;1&apos;</div><div class="line">1 .toString();// &apos;1&apos;</div><div class="line">1..toString();// &apos;1&apos;</div><div class="line">1.toString();//Unexpected token ILLEGAL</div><div class="line">//null undefined</div><div class="line">null.toString();//Cannot call method &apos;toString&apos; of null</div><div class="line">undefined.toString();//Cannot call method &apos;toString&apos; of undefined</div></pre></td></tr></table></figure>
+<p>数字应该是js引擎解析出错<br><strong>这里特别注意的是对象也分为普通对象和函数对象，函数对象就是通过new Function创建的对象普通对象就是Object后面讲到原型时会用到。</strong></p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var text1=&#123;&#125;;</div><div class="line">var text2=&#123;name:&apos;xx&apos;,age:&apos;3&apos;&#125;</div><div class="line">//属性的访问</div><div class="line">text2.name//xx</div><div class="line">text2[name]//undefined</div><div class="line">text2[&apos;name&apos;]//xx</div></pre></td></tr></table></figure>
+<p>对象属性的删除只有delete,去设置它的值为null、和undefined 只是制空 方便gc回收属性仍然存在。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var text=&#123;name:&apos;xx&apos;,age:&apos;3&apos;,say:&apos;hello&apos;&#125;</div><div class="line">text.name=null;</div><div class="line">text.age=undefined;</div><div class="line">delete text.say;</div><div class="line">text;//&#123;name:null,age:undefined&#125;</div></pre></td></tr></table></figure>
+<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p>概念：每当定义个个对象的时候，对象中会包含一些预定义的属性。其中函数对象的一个属性就叫原型对象prototype。<br>普通对象是没有prototyoe的，但有<strong>proto</strong>属性。<br>作用：原型对象就是用来做继承用的。<br>栗子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var person=function(name)&#123;</div><div class="line">    this.name=name;</div><div class="line">&#125;</div><div class="line">person.prototype.getName=function()&#123;</div><div class="line">    return this.name;</div><div class="line">&#125;</div><div class="line">var xx=new person(&apos;我叫xx&apos;);</div><div class="line">xx.getName();//通过原型的属性继承了getName方法</div></pre></td></tr></table></figure></p>
+<p>至于怎么实现的就得说到原型链了。</p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链 "></a>原型链 </h2><p>概念：JS在创建对象的时候不管是普通对象还是原型对象都有一个叫做<strong>proto</strong>的属性，他用于<strong>指向那个创建它的对象的原型prototype</strong>。<strong>然而创建他的对象也有<em>proto</em>这个属性，同样又指向上一层</strong>，直到 <strong>proto</strong>这个属性为null为止，这样形成的一条链状就叫原型链 。</p>
+<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function person()&#123;</div><div class="line">&#125;</div><div class="line">var p=new person();</div><div class="line">alert(p.__proto__===person.prototype);//true</div></pre></td></tr></table></figure>
+<p>new的作用： </p>
+<ol>
+<li>var p={};//声明个空对象</li>
+</ol>
+<ol>
+<li>p.<strong>proto</strong>=person.prototype;//把P<strong>proto</strong>的属性指向person的原型</li>
+</ol>
+<ol>
+<li>person.call(p);//把this的指针指向p</li>
+</ol>
+<h2 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h2><p>概念：constructor这个属性不会影响内部的任何属性。<br>只是JavaScript语言设计的历史遗留物。由于constructor属性是可以变更的，所以未必真的指向对象的构造函数，只是一个提示。不过，从编程习惯上，我们应该尽量让对象的constructor指向其构造函数，以维持这个惯例。<br>总结下：说白了一个并没什么太大用的东西！y很不靠谱！很费操作！<br>理由看栗子1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//定义构造函数</div><div class="line">function person(name)&#123;</div><div class="line">    this.name=name;</div><div class="line">&#125;</div><div class="line">//给他原型上添加个方法</div><div class="line">person.prototype.say=function()&#123;</div><div class="line">    console.log(this.name);</div><div class="line">&#125;</div><div class="line">//测试下</div><div class="line">var p=new person(&quot;xx&quot;);</div><div class="line">alert(p.constructor)</div></pre></td></tr></table></figure>
+<p>这个栗子没毛病他指向了构造函数。<br>然后看栗子2：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//定义构造函数</div><div class="line">function person(name)&#123;</div><div class="line">    this.name=name;</div><div class="line">&#125;</div><div class="line">//给他原型上添加个方法</div><div class="line">person.prototype=&#123;</div><div class="line">    say:function()&#123;</div><div class="line">    console.log(this.name)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">//测试下</div><div class="line">var p=new person(&quot;xx&quot;);</div><div class="line">alert(p.constructor)</div></pre></td></tr></table></figure>
+<h2 id="hasOwnProperty-NaN"><a href="#hasOwnProperty-NaN" class="headerlink" title="hasOwnProperty"></a>hasOwnProperty</h2><p>来源：它就是通过原型链从Object.prototype那继承过来的。<br>作用：用来判断一个对象是否包含自定义属性而不是原型链上的属性<br>上栗子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Object.prototype.one=1;//先定义一个原型属性one</div><div class="line">var text=&#123;two:2,three:3&#125;;//那么所有的普通对象都继承one</div><div class="line">console.log(text.one);//1</div><div class="line">&apos;one&apos; in text;//true 他去找原型链上的属性去了</div><div class="line">text.hasOwnProperty(&apos;one&apos;);//false</div><div class="line">text.hasOwnProperty(&apos;two&apos;);//true</div><div class="line">text.hasOwnProperty(&apos;three&apos;);//true</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
         
-          
-          前端架构该做的事1.做人。不能太自负，要能接受队友的意见。不能为了架构而架构，要为了匹配当前团队的业务与人。在技术选型的时候千万不要去把语言与语言的对比太当回事，因为当一个技术用的极致不会比另外对比的语言差到哪去的。2.代码与文件分模型。模块化代码，模块文件。比如可以所有的JS都放一个文件，也可以一
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/26/framework-xu/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+
+      
+    </div>
+
+    <div>
+      
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.JPG" alt="Li Xin WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.JPG" alt="Li Xin Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
       
 
       
+        
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/26/javascript-xj/" rel="next" title="在编写javascript时要注意的一些细节">
+                <i class="fa fa-chevron-left"></i> 在编写javascript时要注意的一些细节
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/26/javascript-this/" rel="prev" title="javascript关于this 以及this的显示设置(apply、call、bind)">
+                javascript关于this 以及this的显示设置(apply、call、bind) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -608,6 +527,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -627,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/blog.png"
@@ -719,6 +653,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象"><span class="nav-number">1.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型"><span class="nav-number">3.</span> <span class="nav-text">原型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型链"><span class="nav-number">4.</span> <span class="nav-text">原型链 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new"><span class="nav-number">5.</span> <span class="nav-text">new</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructor-NaN"><span class="nav-number">6.</span> <span class="nav-text">constructor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hasOwnProperty-NaN"><span class="nav-number">7.</span> <span class="nav-text">hasOwnProperty</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -839,6 +789,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

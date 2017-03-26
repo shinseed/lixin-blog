@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -87,15 +87,16 @@
 
 
 
-<meta name="description" content="工作中...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lixin-blog">
-<meta property="og:url" content="https://shinseed.github.io/lixin-blog/index.html">
+<meta name="description" content="1.javascript不管是变量（or 叫变量表达式？或者变量的声明与赋值吧 var scope=”loacal”）的声明还是函数（or 函数表达式）的声明,都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。1234567var scope=&amp;apos;global&amp;apos;;//全局变量function text()&amp;#123;    console.log(scope)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript 声明前置与作用域 （hoisting& Scoping）">
+<meta property="og:url" content="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-scope/index.html">
 <meta property="og:site_name" content="lixin-blog">
-<meta property="og:description" content="工作中...">
+<meta property="og:description" content="1.javascript不管是变量（or 叫变量表达式？或者变量的声明与赋值吧 var scope=”loacal”）的声明还是函数（or 函数表达式）的声明,都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。1234567var scope=&amp;apos;global&amp;apos;;//全局变量function text()&amp;#123;    console.log(scope)">
+<meta property="og:updated_time" content="2017-03-26T07:57:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lixin-blog">
-<meta name="twitter:description" content="工作中...">
+<meta name="twitter:title" content="javascript 声明前置与作用域 （hoisting& Scoping）">
+<meta name="twitter:description" content="1.javascript不管是变量（or 叫变量表达式？或者变量的声明与赋值吧 var scope=”loacal”）的声明还是函数（or 函数表达式）的声明,都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。1234567var scope=&amp;apos;global&amp;apos;;//全局变量function text()&amp;#123;    console.log(scope)">
 
 
 
@@ -123,14 +124,14 @@
 
 
 
-  <link rel="canonical" href="https://shinseed.github.io/lixin-blog/"/>
+  <link rel="canonical" href="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-scope/"/>
 
 
 
 
 
 
-  <title> lixin-blog </title>
+  <title> javascript 声明前置与作用域 （hoisting& Scoping） | lixin-blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -165,9 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,9 +269,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -281,7 +280,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/css-oocss/">
+    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/javascript-scope/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Xin">
@@ -302,10 +301,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/26/css-oocss/" itemprop="url">
-                  面向对象css
-                </a>
+                javascript 声明前置与作用域 （hoisting& Scoping）
               
             
           </h2>
@@ -320,7 +316,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T16:01:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:57:25+08:00">
                 2017-03-26
               </time>
             
@@ -343,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css/" itemprop="url" rel="index">
-                    <span itemprop="name">css</span>
+                  <a href="/categories/JavaScript基础/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript基础</span>
                   </a>
                 </span>
 
@@ -356,173 +352,21 @@
 
           
             
-          
-
-          
-          
-             <span id="/2017/03/26/css-oocss/" class="leancloud_visitors" data-flag-title="面向对象css">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          oo css既面向对象的css
-作用1.加强代码的复用方便维护。2.减小css体积。3.提升渲染效率。4.组件库思想、栅格布局可共用、减少选择器、方便扩展。
-注意事项1.不要直接定义子节点，应把共性声明放到父类。2.结构和皮肤相分离。3.容器和内容想相分离。4.抽象出可重用的元素，建好组件库，在组件
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/26/css-oocss/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/framework-xu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Xin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/blog.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lixin-blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/26/framework-xu/" itemprop="url">
-                  前端架构
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/03/26/javascript-scope/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:59:13+08:00">
-                2017-03-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/FrameWork/" itemprop="url" rel="index">
-                    <span itemprop="name">FrameWork</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
             
           
 
           
           
-             <span id="/2017/03/26/framework-xu/" class="leancloud_visitors" data-flag-title="前端架构">
+             <span id="/2017/03/26/javascript-scope/" class="leancloud_visitors" data-flag-title="javascript 声明前置与作用域 （hoisting& Scoping）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -534,6 +378,11 @@
              </span>
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>点击量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
           
 
           
@@ -551,56 +400,110 @@
       
 
       
+        <h2 id="1-javascript不管是变量（or-叫变量表达式？或者变量的声明与赋值吧-var-scope-”loacal”）的声明还是函数（or-函数表达式）的声明-都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。"><a href="#1-javascript不管是变量（or-叫变量表达式？或者变量的声明与赋值吧-var-scope-”loacal”）的声明还是函数（or-函数表达式）的声明-都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。" class="headerlink" title="1.javascript不管是变量（or 叫变量表达式？或者变量的声明与赋值吧 var scope=”loacal”）的声明还是函数（or 函数表达式）的声明,都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。"></a>1.javascript不管是变量（or 叫变量表达式？或者变量的声明与赋值吧 var scope=”loacal”）的声明还是函数（or 函数表达式）的声明,都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=&apos;global&apos;;//全局变量</div><div class="line">function text()&#123;</div><div class="line">    console.log(scope);//输出为undefined</div><div class="line">    var scope=&apos;local&apos;;</div><div class="line">    console.log(scope);//输出为local</div><div class="line">&#125;</div><div class="line">text();</div></pre></td></tr></table></figure>
+<p>而上面的代码等价于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var scope;</div><div class="line">scope=&quot;global&quot;</div><div class="line">function text()&#123;</div><div class="line">   var scope;         //命名前置</div><div class="line">   console.log(scope);//输出为undefined</div><div class="line">   scope=&apos;local&apos;;</div><div class="line">   console.log(scope);//输出为local</div><div class="line">&#125;</div><div class="line">text();</div></pre></td></tr></table></figure>
+<p>换成函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">text1();</div><div class="line">function text1()&#123;//函数的声明</div><div class="line">    alert(1);//弹出1</div><div class="line">&#125;</div><div class="line">text2();</div><div class="line">var text2=function()&#123;//函数表达式</div><div class="line">    alert(1);//undefined is not a function</div><div class="line">&#125;</div><div class="line">//上面的函数表达式声明等价于</div><div class="line">var text3;//声明前置</div><div class="line">text3();</div><div class="line">text3=function()&#123;//函数体留在原地</div><div class="line">    alert(1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-javascript只有函数级作用域没有块级作用域。"><a href="#2-javascript只有函数级作用域没有块级作用域。" class="headerlink" title="2.javascript只有函数级作用域没有块级作用域。"></a>2.javascript只有函数级作用域没有块级作用域。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var name=&apos;golbar&apos;;</div><div class="line">if(true)&#123;</div><div class="line">    var name=&apos;local&apos;;</div><div class="line">    console.log(name);//输出local</div><div class="line">&#125;</div><div class="line">console.log(name);//也输出local</div></pre></td></tr></table></figure>
+<p>如果存在块级作用域那么第一个值为local第二个值为golbar。<br>块级作用域指的是能用for if while 等代码块形成的独立作用域，即为块级作用域。<br>特别注意的是不用var 声明的变量那么他归window所有也就是全局作用域所有。<br>每次引用一个变量，JavaScript 会向上遍历整个作用域直到找到这个变量为止。如果到达全局作用域但是这个变量仍未找到，则会抛出 ReferenceError 异常。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function text()&#123;</div><div class="line">    log=&quot;in function&quot;;</div><div class="line">    console.log(log);</div><div class="line">&#125;；</div><div class="line">text();</div><div class="line">console.log(window.log)//都输出为 in function</div></pre></td></tr></table></figure></p>
+<p>还有个就是作用域链：一个函数体重嵌套了多层函数体，并在不同的函数体中定义了同一个变量，当其中一个函数访问这个变量时，变会形成一条作用域链 scope chain</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">chain=&apos;window&apos;;</div><div class="line">function one()&#123;</div><div class="line">    var chain=&apos;one&apos;;</div><div class="line">    function two()&#123;</div><div class="line">        var chain=&apos;two&apos;;</div><div class="line">        console.log(chain);</div><div class="line">    &#125;；</div><div class="line">    function three()&#123;</div><div class="line">        console.log(chain);</div><div class="line">    &#125;；</div><div class="line">    two();</div><div class="line">    three();</div><div class="line">&#125;；</div><div class="line">one();             //two one </div><div class="line">console.log(chain);// window</div></pre></td></tr></table></figure>
+<p>作用域链有个特殊情况就是with语句：JS中的with语句主要用来临时扩展作用域链，将语句中的对象添加到作用域的头部。with语句结束后，作用域链恢复正常。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">chain=&apos;window&apos;;</div><div class="line">function one()&#123;</div><div class="line">    var chain=&apos;one&apos;;</div><div class="line">     function two(obj)&#123;</div><div class="line">         console.log(chain);//输出为one</div><div class="line">         with(obj)&#123;</div><div class="line">         console.log(chain)//输出为obj</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line">     var obj=&#123;chain:&apos;obj&apos;&#125;;</div><div class="line">     two(obj);</div><div class="line">&#125;</div><div class="line">one();</div></pre></td></tr></table></figure>
+<p>还有就是编写代码的时候虽然JS可以不用；或者相直接 if(true) return; 但尽量不要这样写。至于为什么的话以后会写。</p>
+
+      
+    </div>
+
+    <div>
+      
         
-          
-          前端架构该做的事1.做人。不能太自负，要能接受队友的意见。不能为了架构而架构，要为了匹配当前团队的业务与人。在技术选型的时候千万不要去把语言与语言的对比太当回事，因为当一个技术用的极致不会比另外对比的语言差到哪去的。2.代码与文件分模型。模块化代码，模块文件。比如可以所有的JS都放一个文件，也可以一
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/26/framework-xu/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+
+      
+    </div>
+
+    <div>
+      
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.JPG" alt="Li Xin WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.JPG" alt="Li Xin Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
       
 
       
+        
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/26/javascript-this/" rel="next" title="javascript关于this 以及this的显示设置(apply、call、bind)">
+                <i class="fa fa-chevron-left"></i> javascript关于this 以及this的显示设置(apply、call、bind)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/26/framework-xu/" rel="prev" title="前端架构">
+                前端架构 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -608,6 +511,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -627,8 +536,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/blog.png"
@@ -719,6 +637,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-javascript不管是变量（or-叫变量表达式？或者变量的声明与赋值吧-var-scope-”loacal”）的声明还是函数（or-函数表达式）的声明-都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。"><span class="nav-number">1.</span> <span class="nav-text">1.javascript不管是变量（or 叫变量表达式？或者变量的声明与赋值吧 var scope=”loacal”）的声明还是函数（or 函数表达式）的声明,都遵循命名在当前作用域前置（提升到当前命名空间顶端）函数体保留在原地。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-javascript只有函数级作用域没有块级作用域。"><span class="nav-number">2.</span> <span class="nav-text">2.javascript只有函数级作用域没有块级作用域。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -839,6 +773,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

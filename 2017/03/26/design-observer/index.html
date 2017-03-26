@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="design pattern," />
 
 
 
@@ -87,15 +87,25 @@
 
 
 
-<meta name="description" content="工作中...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lixin-blog">
-<meta property="og:url" content="https://shinseed.github.io/lixin-blog/index.html">
+<meta name="description" content="概念观察者模式是一个一对多的关系，让多个观察者同时监听一个对象，当这个对象发生了变化时，它会广播给监听它的观察者。使他们自动更新。
+作用1.支持简单的广播通信，自动通知所有的监听者。2.当页面载入后，被观察对象很容易与观察者有一种动态关联的关系，来增加灵活性。3.被观察对象，与观察者之间的抽象耦合关系能够单独的扩展和重用。
+注意要先监听，然后在发布通知。
+栗子1234567891011121314">
+<meta property="og:type" content="article">
+<meta property="og:title" content="观察者模式">
+<meta property="og:url" content="https://shinseed.github.io/lixin-blog/2017/03/26/design-observer/index.html">
 <meta property="og:site_name" content="lixin-blog">
-<meta property="og:description" content="工作中...">
+<meta property="og:description" content="概念观察者模式是一个一对多的关系，让多个观察者同时监听一个对象，当这个对象发生了变化时，它会广播给监听它的观察者。使他们自动更新。
+作用1.支持简单的广播通信，自动通知所有的监听者。2.当页面载入后，被观察对象很容易与观察者有一种动态关联的关系，来增加灵活性。3.被观察对象，与观察者之间的抽象耦合关系能够单独的扩展和重用。
+注意要先监听，然后在发布通知。
+栗子1234567891011121314">
+<meta property="og:updated_time" content="2017-03-26T07:48:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lixin-blog">
-<meta name="twitter:description" content="工作中...">
+<meta name="twitter:title" content="观察者模式">
+<meta name="twitter:description" content="概念观察者模式是一个一对多的关系，让多个观察者同时监听一个对象，当这个对象发生了变化时，它会广播给监听它的观察者。使他们自动更新。
+作用1.支持简单的广播通信，自动通知所有的监听者。2.当页面载入后，被观察对象很容易与观察者有一种动态关联的关系，来增加灵活性。3.被观察对象，与观察者之间的抽象耦合关系能够单独的扩展和重用。
+注意要先监听，然后在发布通知。
+栗子1234567891011121314">
 
 
 
@@ -123,14 +133,14 @@
 
 
 
-  <link rel="canonical" href="https://shinseed.github.io/lixin-blog/"/>
+  <link rel="canonical" href="https://shinseed.github.io/lixin-blog/2017/03/26/design-observer/"/>
 
 
 
 
 
 
-  <title> lixin-blog </title>
+  <title> 观察者模式 | lixin-blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -165,9 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,9 +278,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -281,7 +289,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/css-oocss/">
+    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/design-observer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Xin">
@@ -302,10 +310,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/26/css-oocss/" itemprop="url">
-                  面向对象css
-                </a>
+                观察者模式
               
             
           </h2>
@@ -320,7 +325,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T16:01:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:46:56+08:00">
                 2017-03-26
               </time>
             
@@ -343,8 +348,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css/" itemprop="url" rel="index">
-                    <span itemprop="name">css</span>
+                  <a href="/categories/JavaScript设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript设计模式</span>
                   </a>
                 </span>
 
@@ -356,173 +361,21 @@
 
           
             
-          
-
-          
-          
-             <span id="/2017/03/26/css-oocss/" class="leancloud_visitors" data-flag-title="面向对象css">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          oo css既面向对象的css
-作用1.加强代码的复用方便维护。2.减小css体积。3.提升渲染效率。4.组件库思想、栅格布局可共用、减少选择器、方便扩展。
-注意事项1.不要直接定义子节点，应把共性声明放到父类。2.结构和皮肤相分离。3.容器和内容想相分离。4.抽象出可重用的元素，建好组件库，在组件
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/26/css-oocss/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://shinseed.github.io/lixin-blog/2017/03/26/framework-xu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Xin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/blog.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lixin-blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/26/framework-xu/" itemprop="url">
-                  前端架构
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/03/26/design-observer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-26T15:59:13+08:00">
-                2017-03-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/FrameWork/" itemprop="url" rel="index">
-                    <span itemprop="name">FrameWork</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
             
           
 
           
           
-             <span id="/2017/03/26/framework-xu/" class="leancloud_visitors" data-flag-title="前端架构">
+             <span id="/2017/03/26/design-observer/" class="leancloud_visitors" data-flag-title="观察者模式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -534,6 +387,11 @@
              </span>
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>点击量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
           
 
           
@@ -551,56 +409,101 @@
       
 
       
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>观察者模式是一个一对多的关系，让多个观察者同时监听一个对象，当这个对象发生了变化时，它会广播给监听它的观察者。使他们自动更新。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>1.支持简单的广播通信，自动通知所有的监听者。<br>2.当页面载入后，被观察对象很容易与观察者有一种动态关联的关系，来增加灵活性。<br>3.被观察对象，与观察者之间的抽象耦合关系能够单独的扩展和重用。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>要先监听，然后在发布通知。</p>
+<h2 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">		&lt;title&gt;&lt;/title&gt;</div><div class="line">		&lt;script src=&quot;http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line"></div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">			~(function() &#123;</div><div class="line">				var o = $(&#123;&#125;);</div><div class="line">				$.jianting = function() &#123;</div><div class="line">					o.on.apply(o, arguments);</div><div class="line">				&#125;</div><div class="line">				$.tongzhi = function() &#123;</div><div class="line">					o.trigger.apply(o, arguments);</div><div class="line">				&#125;</div><div class="line"></div><div class="line">				$.shanchu = function() &#123;</div><div class="line">					o.off.apply(o, arguments);</div><div class="line">				&#125;</div><div class="line"></div><div class="line">			&#125;)()</div><div class="line"></div><div class="line">			$.jianting(&quot;频道&quot;, function(e, a, b) &#123;</div><div class="line">				alert(a + b)</div><div class="line">			&#125;)</div><div class="line">			$.jianting(&quot;频道&quot;, function(e, a, b) &#123;</div><div class="line">				alert(a - b)</div><div class="line">			&#125;)</div><div class="line">			setTimeout(function() &#123;</div><div class="line">				$.tongzhi(&quot;频道&quot;, [1, 2]);</div><div class="line">			&#125;, 1000)</div><div class="line">		&lt;/script&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
         
-          
-          前端架构该做的事1.做人。不能太自负，要能接受队友的意见。不能为了架构而架构，要为了匹配当前团队的业务与人。在技术选型的时候千万不要去把语言与语言的对比太当回事，因为当一个技术用的极致不会比另外对比的语言差到哪去的。2.代码与文件分模型。模块化代码，模块文件。比如可以所有的JS都放一个文件，也可以一
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/26/framework-xu/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+
+      
+    </div>
+
+    <div>
+      
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.JPG" alt="Li Xin WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.JPG" alt="Li Xin Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/design-pattern/" rel="tag"># design pattern</a>
+          
+        </div>
       
 
       
+        
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/26/design-yz/" rel="next" title="设计模式原则">
+                <i class="fa fa-chevron-left"></i> 设计模式原则
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/26/javascript-bb/" rel="prev" title="javascript 闭包、内存泄漏与溢出">
+                javascript 闭包、内存泄漏与溢出 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -608,6 +511,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -627,8 +536,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/blog.png"
@@ -719,6 +637,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-number">2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栗子"><span class="nav-number">4.</span> <span class="nav-text">栗子</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -839,6 +773,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
