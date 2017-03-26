@@ -3,6 +3,46 @@
 
 
     
+  <url>
+    <loc>https://shinseed.github.io/lixin-blog/2017/03/26/design-observer/</loc>
+    <lastmod>2017-03-26T10:11:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>观察者模式</title>
+        <pubTime>2017-03-26T07:46:00.000Z</pubTime>
+        
+        <tag>design pattern</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript设计模式" url="https://shinseed.github.io/lixin-blog/categories/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://shinseed.github.io/lixin-blog/2017/03/25/javasceipt-thread/</loc>
+    <lastmod>2017-03-26T09:43:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>javascript:伪线程与线程</title>
+        <pubTime>2017-03-25T15:19:35.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript基础" url="https://shinseed.github.io/lixin-blog/categories/JavaScript%E5%9F%BA%E7%A1%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://shinseed.github.io/lixin-blog/2017/03/26/javascript-obj/</loc>
@@ -138,46 +178,6 @@
            
              
               <breadCrumb title="JavaScript基础" url="https://shinseed.github.io/lixin-blog/categories/JavaScript%E5%9F%BA%E7%A1%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://shinseed.github.io/lixin-blog/2017/03/25/javasceipt-thread/</loc>
-    <lastmod>2017-03-26T07:51:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>javascript:伪线程与线程</title>
-        <pubTime>2017-03-25T15:19:35.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript基础" url="https://shinseed.github.io/lixin-blog/categories/JavaScript%E5%9F%BA%E7%A1%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://shinseed.github.io/lixin-blog/2017/03/26/design-observer/</loc>
-    <lastmod>2017-03-26T07:48:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>观察者模式</title>
-        <pubTime>2017-03-26T07:46:56.000Z</pubTime>
-        
-        <tag>design pattern</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript设计模式" url="https://shinseed.github.io/lixin-blog/categories/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
           
         </display>
     </data>
