@@ -1709,7 +1709,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #de1b18;
+  background: #4912a1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2813,7 +2813,7 @@ hr {
   border-left: 8px solid #4d768c;
 }
 .header {
-  background: url("../images/blog.png");
+  background: url("../images/bg.gif");
   background-size: 100% 100%;
 }
 .site-meta {
@@ -2867,7 +2867,7 @@ hr {
 }
 .sidebar {
   box-shadow: inset 2px 2px 40px #bdb2b2;
-  background: url("../images/blog.png");
+  background: url("../images/timg.jpeg");
   background-size: 100% 100%;
 }
 .sidebar a {
